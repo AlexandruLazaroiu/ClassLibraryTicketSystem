@@ -32,7 +32,31 @@ namespace ClassLibraryTicketSystem.Tests
             Assert.AreEqual(240,testValue);
 
         }
+        /// <summary>
+        /// testing the sale brobizz method
+        /// </summary>
+        [TestMethod()]
+        public void BrobizzTest()
+        {
+            Car c = new Car("123AB", DateTime.Now);
+            c.Brobizz = true;
+            double testValue = c.Price();
+            Assert.AreEqual(228, testValue);
 
+        }
+        /// <summary>
+        /// testing string length for license plates.
+        /// </summary>
+        [TestMethod()]
+        public void LicensePlateTest()
+        {
+            //arrange
+            Car b = new Car("123123ABCABC", DateTime.Now);
+            //act
+            //assert
+            Assert.Fail("License plate too long");
+        }
+        
         [TestMethod()]
         public void VehicleTypeTest()
         {

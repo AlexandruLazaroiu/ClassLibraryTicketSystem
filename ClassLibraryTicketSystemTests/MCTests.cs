@@ -25,6 +25,18 @@ namespace ClassLibraryTicketSystem.Tests
             Assert.AreEqual(125, testValue);
             
         }
+        /// <summary>
+        /// testing the reduced price brobizz method
+        /// </summary>
+        [TestMethod()]
+        public void BrobizzTest()
+        {
+            MC m = new MC("123AB", DateTime.Now);
+            m.Brobizz = true;
+            double testValue = m.Price();
+            Assert.AreEqual(118.75, testValue);
+
+        }
 
         [TestMethod()]
         public void VehicleTest()
