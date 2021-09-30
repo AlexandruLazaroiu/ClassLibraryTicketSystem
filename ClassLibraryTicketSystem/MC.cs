@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    public class MC
+    public class MC : Vehicle
+
     {
-        public MC(string licensePlate, DateTime date)
-        {
+    public MC(string licensePlate, DateTime date):base(licensePlate,date)
+    {
 
-        }
+    }
 
-        public double Price()
-        {
-            return 125;
-        }
+    public override double Price()
+    {
+        return 125;
+    }
 
-        public string Vehicle()
-        {
-            return "MC";
-        }
+    public override string VehicleType()
+    {
+        return "MC";
+    }
     }
 }

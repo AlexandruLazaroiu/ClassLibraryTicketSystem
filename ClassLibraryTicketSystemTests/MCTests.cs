@@ -34,7 +34,7 @@ namespace ClassLibraryTicketSystem.Tests
 
             //act
 
-            string testValue = m.Vehicle();
+            string testValue = m.VehicleType();
             //assert
             Assert.AreEqual("MC", testValue);
         }

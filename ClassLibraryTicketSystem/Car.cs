@@ -8,22 +8,23 @@ namespace ClassLibraryTicketSystem
 {   /// <summary>
     /// Car class
     /// </summary>
-    public class Car
+    public class Car : Vehicle
     {
         /// <summary>
         /// Constructor for Car class with 2 parameters
         /// </summary>
         /// <param name="licensePlate"></param>
-        /// <param name="Date"></param>
-        public Car(string licensePlate, DateTime Date)
+        /// <param name="dateTime"></param>
+        public Car(string licensePlate, DateTime dateTime) : base(licensePlate, dateTime)
         {
-
+            Date = dateTime;
+            LicensePlate = licensePlate;
         }
         /// <summary>
-        /// base price
+        /// base price, now is overriden from the VehicleType class method
         /// </summary>
         /// <returns>double 240</returns>
-        public double Price()
+        public override double Price()
         {
             return 240;
         }
@@ -31,7 +32,7 @@ namespace ClassLibraryTicketSystem
         /// A string returning the type of car.
         /// </summary>
         /// <returns></returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
