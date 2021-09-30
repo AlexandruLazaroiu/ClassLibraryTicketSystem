@@ -9,12 +9,18 @@ namespace ClassLibraryTicketSystem
     public abstract class Vehicle
     {
         private string _licensePlate;
-
+        /// <summary>
+        /// parent class for MC and Car
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="dateTime"></param>
         protected Vehicle(string licensePlate, DateTime dateTime)
         {
 
         }
-
+        /// <summary>
+        /// method to see the length of the license plate, 7 being the maximum allowed length
+        /// </summary>
         protected string LicensePlate
         {
             get
@@ -27,7 +33,7 @@ namespace ClassLibraryTicketSystem
                 {
                     throw new ArgumentException("Invalid License Plate, too many characters");
                 }
-                LicensePlate = value;
+                _licensePlate = value;
             }
         }
         /// <summary>
